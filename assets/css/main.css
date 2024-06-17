@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Squada+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@font-face {
+  font-family: "Capital Daren Italic";
+  src: url("~/assets/fonts/capital_daren_italic-webfont.woff") format("woff");
+}
+
+* {
+  cursor: none;
+}
+
+body {
+  @apply select-none bg-slate-950 font-rubik text-white;
+}
+
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-sm bg-gradient-to-b from-amber-500 via-amber-600 to-amber-700;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-950;
+}
