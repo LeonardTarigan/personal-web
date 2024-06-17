@@ -11,7 +11,9 @@
       :class="pressed ? 'h-20 w-20' : ''"
       :style="{ left: `${x}px`, top: `${y - 115}px` }"
     ></div>
-    <div class="fixed z-50 font-semibold text-white">{{ x }} {{ y }}</div>
+    <div class="fixed z-50 font-semibold text-white">
+      {{ x }} {{ pageX }} {{ y }}
+    </div>
     <slot />
     <SectionFooter />
   </div>
@@ -21,6 +23,9 @@
 const { x, y } = useMouse({ scroll: false, type: "screen" });
 const { pressed } = useMousePressed();
 const { width } = useWindowSize();
+const pageX = ref(0);
+
+document.addEventListener("mousemove", (e) => (pageX.value = e.pageX));
 
 const isDark = useDark();
 </script>

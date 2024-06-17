@@ -5,9 +5,9 @@
   src: url("~/assets/fonts/capital_daren_italic-webfont.woff") format("woff");
 }
 
-* {
+/* * {
   cursor: none;
-}
+} */
 
 body {
   @apply select-none bg-slate-950 font-rubik text-white;
