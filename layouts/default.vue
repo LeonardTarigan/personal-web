@@ -1,6 +1,6 @@
 <template>
   <div class="mx-auto max-w-screen-2xl overflow-hidden">
-    <div
+    <!-- <div
       v-if="width >= 1024"
       class="cursor-dot h-2 w-2 bg-amber-500"
       :style="{ left: `${x}px`, top: `${y - 115}px` }"
@@ -10,10 +10,10 @@
       class="cursor-outline h-10 w-10 bg-amber-500 mix-blend-difference transition-all duration-[60ms]"
       :class="pressed ? 'h-20 w-20' : ''"
       :style="{ left: `${x}px`, top: `${y - 115}px` }"
-    ></div>
-    <div class="fixed z-50 font-semibold text-white">
+    ></div> -->
+    <!-- <div class="fixed z-50 font-semibold text-white">
       {{ x }} {{ pageX }} {{ y }}
-    </div>
+    </div> -->
     <slot />
     <SectionFooter />
   </div>
@@ -23,9 +23,6 @@
 const { x, y } = useMouse({ scroll: false, type: "screen" });
 const { pressed } = useMousePressed();
 const { width } = useWindowSize();
-const pageX = ref(0);
-
-document.addEventListener("mousemove", (e) => (pageX.value = e.pageX));
 
 const isDark = useDark();
 </script>
