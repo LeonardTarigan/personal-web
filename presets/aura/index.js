@@ -13,7 +13,6 @@ export default {
   global,
   directives: {
     tooltip,
-    badgedirective,
     ripple,
   },
   button,
