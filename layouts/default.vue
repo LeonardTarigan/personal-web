@@ -25,11 +25,12 @@ const { pressed } = useMousePressed();
 const { width } = useWindowSize();
 
 const isDark = useDark();
+const rtConfig = useRuntimeConfig();
 
 useSeoMeta({
   description: "Informatics Student with a Passion for Software Engineering",
   ogDescription: "Bring Your Ideas to Life",
-  ogImage: "/public/img/image-og.png",
+  ogImage: rtConfig.public.BASE_URL + "img/image-og.png",
 });
 </script>
 
