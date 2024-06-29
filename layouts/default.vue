@@ -25,6 +25,12 @@ const { pressed } = useMousePressed();
 const { width } = useWindowSize();
 
 const isDark = useDark();
+
+useSeoMeta({
+  description: "Informatics Student with a Passion for Software Engineering",
+  ogDescription: "Bring Your Ideas to Life",
+  ogImage: "/public/img/image-og.png",
+});
 </script>
 
 <style scoped>

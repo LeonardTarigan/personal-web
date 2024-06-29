@@ -28,4 +28,9 @@ export default defineNuxtConfig({
     },
     importPT: { as: "Aura", from: "~/presets/aura" },
   },
+  app: {
+    head: {
+      title: "Leonard Tarigan - Frontend Engineer",
+    },
+  },
 });
