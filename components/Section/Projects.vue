@@ -7,15 +7,18 @@
     </h2>
     <div class="group grid w-full gap-2 sm:grid-cols-2 md:grid-cols-3">
       <div
-        v-for="({ image, name }, index) in projectData"
+        v-for="({ image, url }, index) in projectData"
         :key="index"
         class="aspect-video overflow-hidden rounded-lg bg-slate-900"
       >
-        <NuxtImg
-          :src="image"
-          draggable="false"
-          class="aspect-video object-cover transition-all duration-150 hover:scale-105 hover:!brightness-100 group-hover:brightness-50"
-        />
+        <NuxtLink :to="url ?? ''" target="_blank">
+          <NuxtImg
+            :src="image"
+            draggable="false"
+            class="aspect-video object-cover transition-all duration-150 hover:scale-105 hover:!brightness-100 group-hover:brightness-50"
+            :class="!url && 'cursor-not-allowed'"
+          />
+        </NuxtLink>
       </div>
     </div>
     <!-- <NuxtLink to="/projects">
@@ -36,26 +39,32 @@ const projectData = ref([
   {
     name: "TEDxUniversitasBrawijaya Official Website",
     image: "img/image-project-thumb-tedx.png",
+    url: null,
   },
   {
     name: "Faceless",
     image: "img/image-project-thumb-faceless.png",
+    url: "https://faceless-message.vercel.app/",
   },
   {
     name: "Sky",
     image: "img/image-project-thumb-sky.png",
+    url: "https://sky-weather.vercel.app/",
   },
   {
     name: "DiaLink",
     image: "img/image-project-thumb-dialink.png",
+    url: "https://dialink.vercel.app/",
   },
   {
     name: "AniZone",
     image: "img/image-project-thumb-anizone.png",
+    url: "https://anizone.netlify.app/",
   },
   {
     name: "Seekr",
     image: "img/image-project-thumb-seekr.png",
+    url: "https://seekrco.netlify.app/",
   },
 ]);
 </script>
